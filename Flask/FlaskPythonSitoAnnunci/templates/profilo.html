@@ -1,0 +1,62 @@
+{% extends 'layout.html' %} <!-- facciamo l'import di layout -->
+
+<!-- questo blocco sara messo in automatico nel blocco di pagina layout -->
+{% block content %}
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{url_for('homePage')}}">HomePage</a> <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('login')}}">Login</a>  <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('inserisci')}}">Inserisci</a>  <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('profilo')}}">Profilo</a>  <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('logout')}}">Logout</a>  <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+      <!-- FINE_NAVBAR -->
+
+      <h1>Profilo</h1>
+
+      <!-- Permettiamo all'utende di modificare la sua password o email -->
+      <div class="container">
+
+          <h1>Profilo amministrativo</h1>
+              <form class="" action="/profilo" method="POST">
+
+
+              <div class="form-group">
+                <label for="email">L'email attuale è: {{user}}</label>
+                <input type="email" id="inputName" name="email" class="form-control" placeholder="Inserisci la nuova email.." value="">  <!--placeholder fa vedere la scritta ma appena clicco se ne va -->
+              </div>
+
+              <div class="form-group">
+                <label for="password">Cambia password</label>
+                <input type="password" id="inputName" name="password" class="form-control" placeholder="Inserisci la nuova password.." value="">
+              </div>
+
+              <button type="submit" class="bnt bnt-lg bnt-dark bnt-block" name="button">Aggiorna</button>
+      </form>
+
+      </div>
+
+
+{% endblock %}

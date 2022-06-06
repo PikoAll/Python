@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+
+<!-- QUESTA SARA LA PACINA CHE CONTERRA LE BARTI COMUNI CON LE ALTRE PER EVITARE DI AVERE LO STESSO CODICE SCRITTO PIU VOLTE -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"
+    <title>{%block title%}{%endblock%}</title> <!--tra block title e la suo chiusare verra passato da ogni pagina una variabile che anddra messa LIIII -->
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">  <!-- url_forc ci viene messo a disposizione da JNJA e serve per usare dei link sensa usare un percorso assoluto -->
+  </head>
+  <body>
+      <!-- NAVBAR -->
+
+      <!-- Al centro di  blockcontent e alla sua chiusrura verra messeso in automatico da Jnja il codice fi ogni pagina quello diverso tra le pagine -->
+      {% block content%}
+      {% endblock %}
+
+
+      <!-- Questi tre scrip servono per fare funzionare i bottoni o la responsiv degli elementi di bootstrap
+      presi da : https://getbootstrap.com/docs/4.0/getting-started/introduction/
+      -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- Fine_Script per funzionare bootstrap -->
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %} <!-- facciamo l'import di layout -->
+
+<!-- questo blocco sara messo in automatico nel blocco di pagina layout -->
+{% block content %}
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{url_for('homePage')}}">HomePage</a> <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('login')}}">Login</a>  <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('inserisci')}}">Inserisci</a>  <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('profilo')}}">Profilo</a>  <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('logout')}}">Logout</a>  <!-- in questo caso in url_forc passo solo il nome della funzione che mi indirizzera a unaltra pagine-->
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+      <!-- FINE_NAVBAR -->
+
+      <h1>Logout</h1>
+
+
+{% endblock %}
